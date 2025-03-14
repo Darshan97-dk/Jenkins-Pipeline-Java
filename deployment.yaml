@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: jenkins-assingment
+  name: jenkins-assignment
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: jenkins-assingment
+      app: jenkins-assignment
   template:
     metadata:
       labels:
-        app: jenkins-assingment
+        app: jenkins-assignment
     spec:
       containers:
       - name: jenkins-assignment
-        image: public.ecr.aws/x3l3p6p0/jenkins-assingment:latest
+        image: public.ecr.aws/x3l3p6p0/jenkins-assignment:latest
         ports:
         - containerPort: 8080
